@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>将来価値 - 現在価値 変換ツール</title>
+</head>
+<body>
+    <h1>将来価値 - 現在価値 変換ツール</h1>
+
+    <h2>将来価値を求める</h2>
+    <p>現在の金額</p>
+    <input type="number" id="pv" value="50000">円
+    <p>収益率（年率）</p>
+    <input type="number" id="f-yield" step="0.1" value="5">％
+    <p>年数</p>
+    <input type="number" id="f-years" value="10">年
+    <p>
+        <a href="javascript:void(0);" onclick="fv()">変換する</a>
+    </p>
+    <p id="fv-desc">
+        現在の<span id="pv-for-fv"></span>円は、<span id="p-years-ans"></span>年後の<span id="fv-ans"></span>円です。
+    </p>
+
+    <h2>現在価値を求める</h2>
+    <p>将来の金額</p>
+    <input type="number" id="fv" value="50000">
+    <p>割引率（年率void）</p>
+    <input type="number" id="p-yield" step="0.1" value="5">
+    <p>年数</p>
+    <input type="number" id="p-years" value="10">
+    <p>
+        <a href="javascript:void(0);" onclick="pv()">変換する</a>
+    </p>
+    <p id="pv-desc">
+        <span id="f-years-ans"></span>年後の<span id="fv-for-pv"></span>円は、現在の<span id="pv-ans"></span>円です。
+    </p>
+
+    <script type="text/javascript" src="scripts.js"></script>
+</body>
+</html>
